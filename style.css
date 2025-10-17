@@ -1,0 +1,105 @@
+* { 
+  box-sizing: border-box; 
+}
+
+img {
+    width: 410px;
+    height: 400px;
+    padding: 3.5px;
+  }
+
+body {
+  font-family: Papyrus;
+  color: #ffffff
+} 
+/* Style the header */ 
+.header { 
+  grid-area: header; 
+  background-color: #7d0909;
+  padding: 30px;
+  text-align: center; 
+  font-size: 35px; 
+}
+
+.left, 
+.middle, 
+.right { 
+  padding: 10px; 
+} 
+/* Style the left column */ 
+.left { 
+  grid-area: left; 
+  background-color: #7d0909;
+  text-align: center;
+} 
+/* Style the middle column */ 
+.middle { 
+  grid-area: middle; 
+  background-color: #7d0909;
+  text-align: center;
+} 
+/* Style the right column */ 
+.right { 
+  grid-area: right; 
+  background-color: #7d0909;
+  text-align: center;
+}
+
+.abc { 
+  grid-area: abc;
+  background-color: #7d0909;
+  text-align: center;
+}
+.def { 
+  grid-area: def;
+  background-color: #7d0909;
+  text-align: center; 
+}
+.ghi { 
+  grid-area: ghi;
+  background-color: #7d0909;
+  text-align: center; 
+}
+
+
+/* Style the footer */ 
+.footer { 
+  grid-area: footer; 
+  background-color: #7d0909;
+  padding: 10px; 
+  text-align: center; 
+}
+/* Responsive layout - stack columns on small screens */ 
+/* The grid container */ 
+.grid-container { 
+  display: grid; 
+  grid-template-columns: repeat(6, 1fr); /* Explicitly define six equal columns */ 
+grid-template-areas:  
+  "header header header header header header"  
+  "left left middle middle right right"
+  "abc abc def def ghi ghi"
+  "footer footer footer footer footer footer";
+  gap: 10px; /* Use gap property for spacing between grid items */ 
+
+/* Responsive layout - stack columns on small screens */ 
+/* The grid container */ 
+.grid-container2.0{ 
+  display: grid; 
+  grid-template-columns: repeat(6, 6fr); /* Explicitly define six equal columns */ 
+  grid-template-areas:  
+    "header header header header header header"  
+    "left left middle middle right right"
+    "footer footer footer footer footer footer"
+    "abc abc def def ghi ghi"; 
+  gap: 10px; /* Use gap property for spacing between grid items */ 
+
+}
+    button { 
+        background-color: #800000;
+        color: #fffdfd;
+        border: 1px solid #800000;
+        padding: 10px 20px; 
+        cursor: pointer;
+        font-size: 20px;
+        font-family: Papyrus;
+    }
