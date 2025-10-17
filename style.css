@@ -1,105 +1,78 @@
-* { 
-  box-sizing: border-box; 
+* {
+  box-sizing: border-box;
 }
-
-img {
-    width: 410px;
-    height: 400px;
-    padding: 3.5px;
-  }
 
 body {
   font-family: Papyrus;
-  color: #ffffff
-} 
-/* Style the header */ 
-.header { 
-  grid-area: header; 
+  color: #ffffff;
+  margin: 0;
+  background-color: #000; /* Optional for contrast */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 3.5px;
+  border-radius: 10px;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "header header header header header header"
+    "left left middle middle right right"
+    "abc abc def def ghi ghi"
+    "footer footer footer footer footer footer";
+  gap: 10px;
+}
+
+/* Header and Footer */
+.header,
+.footer {
+  grid-area: header;
   background-color: #7d0909;
   padding: 30px;
-  text-align: center; 
-  font-size: 35px; 
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
 
-.left, 
-.middle, 
-.right { 
-  padding: 10px; 
-} 
-/* Style the left column */ 
-.left { 
-  grid-area: left; 
+.footer {
+  grid-area: footer;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Common section styles */
+.left, .middle, .right,
+.abc, .def, .ghi {
   background-color: #7d0909;
   text-align: center;
-} 
-/* Style the middle column */ 
-.middle { 
-  grid-area: middle; 
-  background-color: #7d0909;
-  text-align: center;
-} 
-/* Style the right column */ 
-.right { 
-  grid-area: right; 
-  background-color: #7d0909;
-  text-align: center;
+  padding: 20px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.abc { 
-  grid-area: abc;
-  background-color: #7d0909;
-  text-align: center;
-}
-.def { 
-  grid-area: def;
-  background-color: #7d0909;
-  text-align: center; 
-}
-.ghi { 
-  grid-area: ghi;
-  background-color: #7d0909;
-  text-align: center; 
-}
+/* Grid area assignments */
+.left { grid-area: left; }
+.middle { grid-area: middle; }
+.right { grid-area: right; }
+.abc { grid-area: abc; }
+.def { grid-area: def; }
+.ghi { grid-area: ghi; }
 
-
-/* Style the footer */ 
-.footer { 
-  grid-area: footer; 
-  background-color: #7d0909;
-  padding: 10px; 
-  text-align: center; 
+/* Button styling */
+button {
+  background-color: #800000;
+  color: #fffdfd;
+  border: 1px solid #800000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Papyrus;
+  margin-top: 10px;
 }
-/* Responsive layout - stack columns on small screens */ 
-/* The grid container */ 
-.grid-container { 
-  display: grid; 
-  grid-template-columns: repeat(6, 1fr); /* Explicitly define six equal columns */ 
-grid-template-areas:  
-  "header header header header header header"  
-  "left left middle middle right right"
-  "abc abc def def ghi ghi"
-  "footer footer footer footer footer footer";
-  gap: 10px; /* Use gap property for spacing between grid items */ 
-
-/* Responsive layout - stack columns on small screens */ 
-/* The grid container */ 
-.grid-container2.0{
-  display: grid; 
-  grid-template-columns: repeat(6, 6fr); /* Explicitly define six equal columns */ 
-  grid-template-areas:  
-    "header header header header header header"  
-    "left left middle middle right right"
-    "footer footer footer footer footer footer"
-    "abc abc def def ghi ghi"; 
-  gap: 10px; /* Use gap property for spacing between grid items */ 
-
-}
-    button { 
-        background-color: #800000;
-        color: #fffdfd;
-        border: 1px solid #800000;
-        padding: 10px 20px; 
-        cursor: pointer;
-        font-size: 20px;
-        font-family: Papyrus;
-    }
