@@ -83,7 +83,7 @@ grid-template-areas:
 
 /* Responsive layout - stack columns on small screens */ 
 /* The grid container */ 
-.grid-container2.0{ 
+.grid-container2.0{
   display: grid; 
   grid-template-columns: repeat(6, 6fr); /* Explicitly define six equal columns */ 
   grid-template-areas:  
